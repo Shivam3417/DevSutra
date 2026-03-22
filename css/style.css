@@ -1,0 +1,291 @@
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #f4f6f9;
+  color: #1f2937;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+  height: 65px;
+  background: #111827;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #10b981;
+}
+
+/* ================= LAYOUT ================= */
+
+.layout {
+  display: flex;
+  margin-top: 65px;
+  align-items: flex-start;
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+  width: 240px;
+  background: white;
+  padding: 20px;
+  border-right: 1px solid #e5e7eb;
+  position: sticky;
+  top: 65px;
+  min-height: calc(100vh - 65px);
+  box-shadow: 4px 0 15px rgba(0,0,0,0.03);
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+/* 🔥 Sidebar Toggle Button */
+.sidebar-toggle {
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+/* Collapsed Sidebar */
+.sidebar.collapsed {
+  width: 70px;
+  padding: 20px 10px;
+}
+
+/* Hide text when collapsed */
+.sidebar.collapsed h3,
+.sidebar.collapsed a {
+  font-size: 0;
+  padding: 10px 0;
+}
+
+/* Keep active highlight visible */
+.sidebar.collapsed a.active {
+  background: #10b981;
+  border-radius: 6px;
+}
+
+/* Sidebar Titles */
+.sidebar h3 {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 15px;
+}
+
+/* Sidebar Links */
+.sidebar a {
+  display: block;
+  padding: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #374151;
+  margin-bottom: 6px;
+  font-size: 14px;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.sidebar a:hover {
+  background: #f3f4f6;
+}
+
+.sidebar a.active {
+  background: #10b981;
+  color: white;
+}
+
+/* ================= MAIN ================= */
+
+.main {
+  padding: 60px;
+  width: 100%;
+  transition: 0.3s ease;
+}
+
+.content {
+  max-width: 1000px;
+}
+
+/* Adjust main when sidebar collapsed */
+.sidebar.collapsed ~ .main {
+  margin-left: 0;
+}
+
+/* ================= SPA PAGES ================= */
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* ================= TYPOGRAPHY ================= */
+
+h1 {
+  font-size: 38px;
+  margin-bottom: 15px;
+}
+
+/* ================= EXAMPLE BOX ================= */
+
+.example-box {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+pre {
+  background: #f9fafb;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+/* ================= BUTTON ================= */
+
+.btn-primary {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #10b981;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-primary:hover {
+  background: #059669;
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  background: #111;
+  color: #fff;
+  padding: 50px 20px 20px;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  margin-bottom: 15px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-col ul li a {
+  text-decoration: none;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #00bcd4;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 1024px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  /* Mobile Drawer */
+  .sidebar {
+    position: fixed;
+    left: -260px;
+    top: 65px;
+    height: calc(100vh - 65px);
+    width: 250px;
+    z-index: 999;
+    border-right: none;
+  }
+
+  .sidebar.show {
+    left: 0;
+  }
+
+  .main {
+    padding: 40px 25px;
+  }
+}

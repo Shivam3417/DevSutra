@@ -1,0 +1,206 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+}
+
+/* IDE WRAPPER */
+
+.ide-wrapper{
+height:100vh;
+display:flex;
+flex-direction:column;
+background:#1e1e1e;
+}
+
+/* TOP BAR */
+
+.topbar{
+height:50px;
+background:#1e1e1e;
+border-bottom:1px solid #333;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 20px;
+}
+
+.logo{
+font-weight:600;
+font-size:15px;
+}
+
+.topbar button{
+background:#0e639c;
+border:none;
+padding:6px 16px;
+color:white;
+cursor:pointer;
+border-radius:4px;
+}
+
+.topbar button:hover{
+background:#1177bb;
+}
+
+/* MAIN AREA */
+
+.main{
+flex:1;
+display:flex;
+height:calc(100vh - 50px);
+overflow:hidden;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:230px;
+background:#252526;
+color:white;
+padding:10px;
+display:flex;
+flex-direction:column;
+border-right:1px solid #333;
+}
+
+.explorer-title{
+font-size:12px;
+margin-bottom:10px;
+color:#aaa;
+letter-spacing:1px;
+}
+
+.sidebar ul{
+list-style:none;
+flex:1;
+overflow:auto;
+}
+
+.sidebar li{
+padding:6px 8px;
+cursor:pointer;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-size:14px;
+border-radius:4px;
+}
+
+.sidebar li:hover{
+background:#2a2d2e;
+}
+
+.sidebar li.active{
+background:#373737;
+}
+
+.delete-btn{
+color:#ff4d4d;
+font-size:12px;
+cursor:pointer;
+}
+
+#newFileBtn{
+margin-top:10px;
+padding:6px;
+background:#333;
+border:none;
+color:white;
+cursor:pointer;
+border-radius:4px;
+}
+
+#newFileBtn:hover{
+background:#444;
+}
+
+/* DRAG BAR */
+
+#dragbar{
+width:5px;
+background:#2d2d2d;
+cursor:col-resize;
+}
+
+/* EDITOR */
+
+.editor-section{
+flex:1;
+background:#1e1e1e;
+}
+
+#editor{
+width:100%;
+height:100%;
+}
+
+/* PREVIEW SECTION */
+
+.preview-section{
+width:40%;
+background:white;
+border-left:1px solid #333;
+display:flex;
+flex-direction:column;
+}
+
+/* PREVIEW HEADER */
+
+.preview-header{
+height:40px;
+background:#f5f5f5;
+border-bottom:1px solid #ddd;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0 10px;
+font-size:14px;
+}
+
+/* FULLSCREEN BUTTON */
+
+#fullscreenBtn{
+background:#0e639c;
+border:none;
+color:white;
+padding:4px 10px;
+cursor:pointer;
+border-radius:4px;
+font-size:12px;
+}
+
+#fullscreenBtn:hover{
+background:#1177bb;
+}
+
+/* PREVIEW FRAME */
+
+#preview{
+flex:1;
+width:100%;
+border:none;
+background:white;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+width:6px;
+height:6px;
+}
+
+::-webkit-scrollbar-track{
+background:#1e1e1e;
+}
+
+::-webkit-scrollbar-thumb{
+background:#555;
+border-radius:3px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+background:#777;
+}

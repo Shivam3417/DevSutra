@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevSutra</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <img src="assets/images/logo.png" alt="DevSutra Logo">
+    <span>DevSutra</span>
+  </div>
+
+  <div class="nav-links">
+    <a href="tutorials.html">Tutorials</a>
+    <a href="references.html">References</a>
+    <a href="examples.html">Examples</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="practice-ide.html">Practice Page</a>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- ✅ SIDEBAR -->
+  <aside class="sidebar" id="sidebar">
+
+    <!-- 🔥 Sidebar Toggle Inside -->
+    <div class="sidebar-toggle" onclick="toggleSidebar()">
+      ☰
+    </div>
+
+    <h3>HTML Tutorial</h3>
+
+    <a href="#" class="active" data-page="introduction">Introduction</a>
+    <a href="#" data-page="elements">Elements</a>
+    <a href="#" data-page="attributes">Attributes</a>
+    <a href="#" data-page="headings">Headings</a>
+    <a href="#" data-page="paragraphs">Paragraphs</a>
+    <hr style="margin:20px 0;">
+
+    <h3>CSS Tutorial</h3>
+
+    <a href="#" data-page="css-introduction">CSS Introduction</a>
+    <a href="#" data-page="css-syntax">CSS Syntax</a>
+    <a href="#" data-page="css-selectors">CSS Selectors</a>
+    <a href="#" data-page="css-colors">CSS Colors</a>
+    <a href="#" data-page="css-boxmodel">CSS Box Model</a>
+    <hr style="margin:20px 0;">
+
+    <h3>JavaScript Tutorial</h3>
+
+    <a href="#" data-page="js-introduction">JS Introduction</a>
+    <a href="#" data-page="js-variables">JS Variables</a>
+    <a href="#" data-page="js-functions">JS Functions</a>
+    <a href="#" data-page="js-events">JS Events</a>
+    <a href="#" data-page="js-dom">JS DOM</a>
+
+  </aside>
+
+  <!-- ✅ MAIN CONTENT -->
+  <main class="main">
+    <div class="content">
+
+      <!-- Introduction -->
+      <section id="introduction" class="page active">
+        <h1>HTML Introduction</h1>
+
+        <p>
+          HTML ka full form <strong>HyperText Markup Language</strong> hai.
+          Ye web pages banane ke liye use hoti hai.
+        </p>
+
+        <br>
+        <h2>HTML Kya Karta Hai?</h2>
+        <br>
+        <ul>
+          <li>Web page ka structure banata hai</li>
+          <li>Text, images, links ko organize karta hai</li>
+          <li>Browser ko batata hai content ka type kya hai</li>
+        </ul>
+
+        <br><br>
+        <div class="example-box">
+          <h3>Example</h3>
+          <pre>
+            &lt;!DOCTYPE html&gt;
+            &lt;html&gt;
+            &lt;head&gt;
+            &lt;title&gt;My Page&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;h1&gt;Hello World&lt;/h1&gt;
+            &lt;/body&gt;
+            &lt;/html&gt;
+          </pre>
+
+          <button class="btn-primary"
+            onclick="openEditorFromExample(this, 'introduction')">
+            Try It Yourself →
+          </button>
+        </div>
+      </section>
+
+      <!-- Elements -->
+      <section id="elements" class="page">
+        <h1>HTML Elements</h1>
+
+        <p>
+          HTML document different elements se milkar banta hai.
+          Ek element start tag, content aur end tag se milkar banta hai.
+        </p>
+
+        <br>
+        <h2>Structure</h2>
+        <br>
+        <p>
+          &lt;tagname&gt; Content &lt;/tagname&gt;
+        </p>
+
+        <br><br>
+        <div class="example-box">
+          <h3>Example</h3>
+          <pre>
+&lt;h1&gt;This is a Heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+          </pre>
+          <button class="btn-primary"
+            onclick="openEditorFromExample(this, 'elements')">
+            Try It Yourself →
+          </button>
+        </div>
+
+        <br><br>
+        <h3>Note:</h3>
+        <br>
+        <p>Some elements empty hote hain jaise &lt;br&gt; aur &lt;hr&gt;.</p>
+      </section>
+
+      <!-- Attributes -->
+      <section id="attributes" class="page">
+        <h1>HTML Attributes</h1>
+
+        <p>
+          Attributes HTML elements ko extra information dete hain.
+          Ye hamesha start tag ke andar likhe jate hain.
+        </p>
+
+        <br>
+        <h2>Syntax</h2>
+        <br>
+        <p>name="value"</p>
+
+        <br><br>
+        <div class="example-box">
+          <h3>Example</h3>
+          <pre>
+&lt;a href="https://google.com"&gt;Visit Google&lt;/a&gt;
+          </pre>
+          <button class="btn-primary"
+            onclick="openEditorFromExample(this, 'attributes')">
+            Try It Yourself →
+          </button>
+        </div>
+
+        <br><br>
+        <h3>Common Attributes</h3>
+        <br>
+        <ul>
+          <li>href</li>
+          <li>src</li>
+          <li>alt</li>
+          <li>class</li>
+          <li>id</li>
+        </ul>
+      </section>
+
+      <!-- Headings -->
+      <section id="headings" class="page">
+        <h1>HTML Headings</h1>
+
+        <p>
+          HTML me 6 heading levels hote hain h1 se h6 tak.
+          h1 sabse important heading hoti hai.
+        </p>
+
+        <br><br>
+        <div class="example-box">
+          <h3>Example</h3>
+          <pre>
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+          </pre>
+          <button class="btn-primary"
+            onclick="openEditorFromExample(this, 'headings')">
+            Try It Yourself →
+          </button>
+        </div>
+      </section>
+
+      <!-- Paragraphs -->
+      <section id="paragraphs" class="page">
+        <h1>HTML Paragraphs</h1>
+
+        <p>
+          Paragraph likhne ke liye &lt;p&gt; tag use hota hai.
+          Browser automatically paragraph ke upar aur niche space deta hai.
+        </p>
+
+        <br>
+        <h2>Line Break</h2>
+        <br>
+        <p>
+          &lt;br&gt; tag line break dene ke liye use hota hai.
+        </p>
+
+        <br><br>
+        <div class="example-box">
+          <h3>Example</h3>
+          <pre>
+&lt;p&gt;This is a paragraph&lt;/p&gt;
+&lt;br&gt;
+&lt;p&gt;Second paragraph&lt;/p&gt;
+          </pre>
+          <button class="btn-primary"
+            onclick="openEditorFromExample(this, 'paragraphs')">
+            Try It Yourself →
+          </button>
+        </div>
+      </section>
+
+      <!-- ================= CSS SECTIONS ================= -->
+
+<section id="css-introduction" class="page">
+  <h1>CSS Introduction</h1>
+
+  <p>
+    CSS ka full form <strong>Cascading Style Sheets</strong> hai.
+    Ye web pages ko design aur style dene ke liye use hoti hai.
+  </p>
+
+  <br>
+  <h2>CSS Kya Karta Hai?</h2>
+  <br>
+  <ul>
+    <li>Colors add karta hai</li>
+    <li>Fonts change karta hai</li>
+    <li>Layout control karta hai</li>
+    <li>Responsive design banata hai</li>
+  </ul>
+
+  <br><br>
+  <div class="example-box">
+    <h3>Example</h3>
+    <pre>
+body {
+  background-color: lightblue;
+}
+    </pre>
+  </div>
+</section>
+
+<section id="css-syntax" class="page">
+  <h1>CSS Syntax</h1>
+
+  <p>CSS rule selector aur declaration block se milkar banta hai.</p>
+
+  <br><br>
+  <div class="example-box">
+    <h3>Example</h3>
+    <pre>
+p {
+  color: red;
+  font-size: 18px;
+}
+    </pre>
+  </div>
+</section>
+
+<section id="css-selectors" class="page">
+  <h1>CSS Selectors</h1>
+
+  <p>Selectors batate hain ki kaunse element ko style karna hai.</p><br>
+
+  <ul>
+    <li>Element selector</li>
+    <li>Class selector (.class)</li>
+    <li>ID selector (#id)</li>
+  </ul>
+<br>
+  <div class="example-box">
+    <h3>Example</h3>
+    <pre>
+#title {
+  color: blue;
+}
+
+.box {
+  border: 1px solid black;
+}
+    </pre>
+  </div>
+</section>
+
+<section id="css-colors" class="page">
+  <h1>CSS Colors</h1>
+
+  <p>CSS me colors name, HEX, RGB ya HSL se define kiye jate hain.</p><br>
+
+  <div class="example-box">
+    <h3>Example</h3>
+    <pre>
+h1 {
+  color: #ff0000;
+}
+
+p {
+  color: rgb(0, 128, 0);
+}
+    </pre>
+  </div>
+</section>
+
+<section id="css-boxmodel" class="page">
+  <h1>CSS Box Model</h1>
+
+  <p>
+    Har HTML element ek box ki tarah hota hai jisme content, padding,
+    border aur margin hote hain.
+  </p><br>
+
+  <div class="example-box">
+    <h3>Example</h3>
+    <pre>
+div {
+  margin: 20px;
+  padding: 15px;
+  border: 2px solid black;
+}
+    </pre>
+  </div>
+</section>
+
+<!-- ================= JAVASCRIPT SECTIONS ================= -->
+
+<section id="js-introduction" class="page">
+  <h1>JavaScript Introduction</h1>
+
+  <p>
+    JavaScript ek programming language hai jo web pages ko interactive banati hai.
+  </p>
+
+  <br>
+  <h2>JavaScript Kya Karta Hai?</h2>
+  <br>
+  <ul>
+    <li>Button click pe action perform karta hai</li>
+    <li>Form validation karta hai</li>
+    <li>Dynamic content change karta hai</li>
+    <li>Animations create karta hai</li>
+  </ul>
+
+  <br><br>
+  <div class="example-box">
+    <h3>Example</h3>
+    <pre>
+&lt;button onclick="showMessage()"&gt;Click Me&lt;/button&gt;
+
+&lt;script&gt;
+function showMessage() {
+  alert("Hello DevSutra!");
+}
+&lt;/script&gt;
+    </pre>
+  </div>
+</section>
+
+<section id="js-variables" class="page">
+  <h1>JavaScript Variables</h1>
+
+  <p>
+    Variables data store karne ke liye use hote hain.
+  </p><br>
+
+  <ul>
+    <li>var (old method)</li>
+    <li>let (recommended)</li>
+    <li>const (constant value)</li>
+  </ul>
+<br>
+  <div class="example-box">
+    <h3>Example</h3>
+    <pre>
+let name = "Rahul";
+const age = 20;
+
+console.log(name);
+    </pre>
+  </div>
+</section>
+
+<section id="js-functions" class="page">
+  <h1>JavaScript Functions</h1>
+
+  <p>
+    Function ek reusable block of code hota hai.
+  </p><br>
+
+  <div class="example-box">
+    <h3>Example</h3>
+    <pre>
+function greet() {
+  console.log("Welcome to DevSutra!");
+}
+
+greet();
+    </pre>
+  </div>
+</section>
+
+<section id="js-events" class="page">
+  <h1>JavaScript Events</h1>
+
+  <p>
+    Events tab trigger hote hain jab user koi action karta hai.
+  </p><br>
+
+  <ul>
+    <li>onclick</li>
+    <li>onmouseover</li>
+    <li>onchange</li>
+  </ul>
+<br>
+  <div class="example-box">
+    <h3>Example</h3>
+    <pre>
+&lt;button onclick="changeText()"&gt;Click&lt;/button&gt;
+
+&lt;script&gt;
+function changeText() {
+  document.body.style.backgroundColor = "yellow";
+}
+&lt;/script&gt;
+    </pre>
+  </div>
+</section>
+
+<section id="js-dom" class="page">
+  <h1>JavaScript DOM</h1>
+
+  <p>
+    DOM (Document Object Model) JavaScript ko HTML elements ko access aur modify karne deta hai.
+  </p><br>
+
+  <div class="example-box">
+    <h3>Example</h3>
+    <pre>
+&lt;p id="demo"&gt;Hello&lt;/p&gt;
+
+&lt;script&gt;
+document.getElementById("demo").innerHTML = "Hello DevSutra!";
+&lt;/script&gt;
+    </pre>
+  </div>
+</section>
+
+    </div>
+  </main>
+
+</div>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div class="footer-col">
+      <h3>DevSutra</h3>
+      <p>
+        Learn Web Development step by step with simple explanations
+        and live examples.
+      </p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Tutorials</h4>
+      <ul>
+        <li><a href="#">HTML Tutorial</a></li>
+        <li><a href="#">CSS Tutorial</a></li>
+        <li><a href="#">JavaScript Tutorial</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Examples</a></li>
+        <li><a href="#">References</a></li>
+        <li><a href="#">Exercises</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>Email: support@mycodeschool.com</li>
+        <li>Phone: +91 9876543210</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 DevSutra | All Rights Reserved
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>

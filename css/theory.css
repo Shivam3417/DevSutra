@@ -1,0 +1,81 @@
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #e5e7eb;
+  color: #222;
+  line-height: 1.7;
+}
+
+/* =========================
+   MAIN CHAPTER CONTAINER
+========================= */
+.chapter-container {
+  max-width: 1000px;
+  margin: 40px auto;   /* Center container */
+  background: #ffffff;
+  padding: 50px 60px;
+  border-radius: 14px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   MAIN HEADING
+========================= */
+.chapter-container h1 {
+  font-size: 34px;
+  color: #2563eb;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+/* =========================
+   SUB HEADINGS
+========================= */
+.chapter-container h2 {
+  font-size: 22px;
+  margin-top: 35px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* =========================
+   PARAGRAPHS
+========================= */
+.chapter-container p {
+  margin-bottom: 18px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* =========================
+   LIST STYLING
+========================= */
+.chapter-container ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.chapter-container li {
+  margin-bottom: 8px;
+}
+
+/* =========================
+   CODE BLOCK
+========================= */
+pre {
+  background: #0f172a;
+  color: #f8fafc;
+  padding: 18px;
+  border-radius: 10px;
+  overflow-x: auto;
+  margin: 20px 0;
+  font-size: 14px;
+}

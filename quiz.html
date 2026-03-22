@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>QuizHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="icon" href="assets/images/logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+  <div class="logo"><img src="assets/images/logo.png" alt="DevSutra Logo">
+    <span>DevSutra Quiz Hub</span></div>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="quiz page.html">Quizzes</a></li>
+    <li><a href="#"></a>Leaderboard</li>
+    <li><a href="#"></a>FAQ</li>
+  </ul>
+</nav>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+  <div class="hero-left">
+    <h1>Test Your <br><span>Knowledge!</span></h1>
+    <p>Challenge yourself with fun and interactive quizzes.</p>
+    <button onclick="window.location.href='quiz page.html'" class="primary-btn">
+        Start Quiz
+    </button>
+  </div>
+
+  <div class="hero-right">
+    <!-- Illustration placeholder -->
+  </div>
+</section>
+
+<!-- ================= FEATURE CARDS ================= -->
+
+<section class="features">
+  <div class="feature-card">
+    <h3>📋 Available Quizzes</h3>
+    <p>Explore different subjects and improve knowledge.</p>
+    <button class="orange-btn">Browse Quizzes</button>
+  </div>
+
+  <div class="feature-card">
+    <h3>🏆 Leaderboard</h3>
+    <p>Compare scores and aim for top position.</p>
+    <button class="blue-btn">View Rankings</button>
+  </div>
+
+  <div class="feature-card">
+    <h3>📊 Track Progress</h3>
+    <p>Review performance and grow daily.</p>
+    <button class="green-btn">View Stats</button>
+  </div>
+</section>
+
+<!-- ================= QUIZ SECTION ================= -->
+
+<section class="quiz-wrapper hidden" id="quizSection">
+
+  <div class="quiz-card">
+    <h2 id="question">Question Here</h2>
+    <div id="options"></div>
+    <button id="nextBtn" class="primary-btn hidden">Next Question</button>
+  </div>
+
+  <div class="leaderboard-card">
+    <h3>🏆 Leader Board</h3>
+    <ul id="leaderboard"></ul>
+    <button class="blue-btn small-btn">View All Rankings</button>
+  </div>
+
+</section>
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+  <div class="stat-box">
+    <h2>12K+</h2>
+    <p>Quizzes Taken</p>
+  </div>
+  <div class="stat-box">
+    <h2>7.5K+</h2>
+    <p>Active Players</p>
+  </div>
+  <div class="stat-box">
+    <h2>6K+</h2>
+    <p>Top Scores</p>
+  </div>
+  <div class="stat-box">
+    <h2>4.9 ⭐</h2>
+    <p>User Rating</p>
+  </div>
+</section>
+
+<script src="js/quiz.js"></script>
+</body>
+</html>

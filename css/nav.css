@@ -1,0 +1,141 @@
+/* ===============================
+   NAVBAR STYLING
+=================================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.top-nav {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.top-nav nav a {
+  text-decoration: none;
+  color: white;
+  margin-left: 30px;
+  font-size: 15px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.top-nav nav a:hover {
+  color: #1abc9c;
+}
+
+.top-nav nav a.active {
+  color: #1abc9c;
+}
+
+/* Underline Animation */
+.top-nav nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #1abc9c;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.top-nav nav a:hover::after {
+  width: 100%;
+}
+
+
+/* ===============================
+   FOOTER STYLING
+=================================*/
+
+footer {
+  background: #0d0f12;
+  color: #ddd;
+  padding: 60px 8%;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  color: white;
+}
+
+.footer-column p,
+.footer-column a {
+  font-size: 14px;
+  color: #bbb;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+.footer-column a:hover {
+  color: #1abc9c;
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+  text-align: center;
+  font-size: 13px;
+  color: #777;
+}
+
+
+/* ===============================
+   RESPONSIVE NAVBAR
+=================================*/
+
+@media (max-width: 768px) {
+
+  .top-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px 25px;
+  }
+
+  .top-nav nav {
+    margin-top: 10px;
+  }
+
+  .top-nav nav a {
+    margin: 10px 15px 0 0;
+    display: inline-block;
+  }
+
+  footer {
+    padding: 40px 25px;
+  }
+
+}

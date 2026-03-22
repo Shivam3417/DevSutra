@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f4f6f9;
+}
+
+/* Topbar */
+.topbar {
+  height: 60px;
+  background: #111827;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2563eb;
+}
+
+.logo img {
+  height: 50px;
+}
+
+button {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  background: #10b981;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #059669;
+}
+
+/* Layout */
+.editor-container {
+  flex: 1;
+  display: flex;
+}
+
+.left-panel,
+.right-panel {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-panel {
+  border-right: 1px solid #ddd;
+}
+
+h3 {
+  padding: 10px;
+  background: #e5e7eb;
+  font-size: 14px;
+}
+
+textarea {
+  flex: 1;
+  border: none;
+  padding: 15px;
+  font-family: monospace;
+  font-size: 14px;
+  resize: none;
+  outline: none;
+}
+
+iframe {
+  flex: 1;
+  border: none;
+  background: white;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .editor-container {
+    flex-direction: column;
+  }
+
+  .left-panel,
+  .right-panel {
+    width: 100%;
+    height: 50%;
+  }
+}

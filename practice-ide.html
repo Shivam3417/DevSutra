@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DevSutra IDE</title>
+
+<link rel="stylesheet" href="ide.css">
+<link rel="icon" href="/assets/images/logo.png">
+
+<!-- MONACO LOADER -->
+<script src="https://unpkg.com/monaco-editor@0.45.0/min/vs/loader.js"></script>
+
+<!-- EMMET SUPPORT -->
+<script src="https://unpkg.com/emmet-monaco-es/dist/emmet-monaco.min.js"></script>
+
+</head>
+
+<body>
+
+<div class="ide-wrapper">
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+
+        <div class="logo">DevSutra IDE</div>
+
+        <div class="top-buttons">
+            <button id="runBtn">▶ Run</button>
+        </div>
+
+    </div>
+
+
+    <!-- MAIN AREA -->
+    <div class="main">
+
+        <!-- SIDEBAR -->
+        <div class="sidebar" id="sidebar">
+
+            <div class="explorer-title">Explorer</div>
+
+            <ul id="fileList"></ul>
+
+            <button id="newFileBtn">+ New File</button>
+
+        </div>
+
+
+        <!-- DRAG RESIZE BAR -->
+        <div id="dragbar"></div>
+
+
+        <!-- EDITOR AREA -->
+        <div class="editor-section">
+
+            <div id="editor"></div>
+
+        </div>
+
+
+        <!-- PREVIEW AREA -->
+        <div class="preview-section">
+
+            <!-- PREVIEW HEADER -->
+            <div class="preview-header">
+
+                <span>Preview</span>
+
+                <button id="fullscreenBtn">⛶ Fullscreen</button>
+
+            </div>
+
+            <iframe id="preview"></iframe>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- IDE SCRIPT -->
+<script src="ide.js"></script>
+
+</body>
+</html>

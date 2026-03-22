@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Editor | DevSutra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/editor.css">
+  <link rel="icon" href="assets/images/logo.png">
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="DevSutra Logo">
+      <span>DevSutra</span>
+    </div>
+    <button id="runBtn">Run ▶</button>
+  </div>
+
+  <div class="editor-container">
+    <div class="left-panel">
+      <h3>Code</h3>
+      <textarea id="code"></textarea>
+    </div>
+
+    <div class="right-panel">
+      <h3>Output</h3>
+      <iframe id="output"></iframe>
+    </div>
+  </div>
+
+  <!-- JS File -->
+  <script src="js/editor.js"></script>
+
+</body>
+</html>
